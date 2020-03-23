@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
     'users',
 ]
 
@@ -48,6 +49,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -127,9 +129,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
-# Whitelisting localhost for React development
-
-CORS_ORIGIN_WHITELIST = (
-         'localhost:3000/'
-     )
