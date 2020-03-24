@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'users',
+    'userbackend',
 ]
 
 REST_FRAMEWORK = {
@@ -129,3 +129,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# https://stackoverflow.com/questions/49189402/auth-user-groups-fields-e304-reverse-accessor-for-user-groups-clashes-with
+
+AUTH_USER_MODEL = 'userbackend.User'
