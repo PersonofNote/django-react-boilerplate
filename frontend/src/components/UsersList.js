@@ -32,7 +32,7 @@ class UsersList extends Component {
     render(){
         return (
             <div className="userListContainer">
-                <ul className="userList">
+                <ul className="list-none">
                     {this.renderItems()}
                 </ul>
             </div>
